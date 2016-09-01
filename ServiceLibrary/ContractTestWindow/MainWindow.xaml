@@ -1,0 +1,28 @@
+﻿<Window x:Class="ContractTestWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContractTestWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        SizeToContent="WidthAndHeight" SizeChanged="Window_SizeChanged">
+    <Grid Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Column="0" Text="0" Name="tbValue1" TextAlignment="Center" VerticalAlignment="Center" FontSize="120"/>
+        <Canvas Grid.Column="1" Name="canvas" Loaded="canvas_Loaded"  />
+        <TextBox Grid.Column="2" Text="0" Name="tbValue2" TextAlignment="Center" VerticalAlignment="Center"  FontSize="120"/>
+        <Button  Grid.ColumnSpan="3" Grid.Row="1" Content="EXECUTE" FontSize="50" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>
